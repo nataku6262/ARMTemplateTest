@@ -20,5 +20,5 @@ steps:
     location: 'UK West'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/nataku6262/ARMTemplateTest/main/deploymentTemplate.json'
-    overrideParameters: '-projectName GavinNamedMe'
+    overrideParameters: '-projectName GavinNamed'
     deploymentMode: 'Incremental'
