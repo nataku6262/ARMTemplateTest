@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'PwCAssets-Tst'
+    subscriptionId: 'bfe7a7fe-2b07-4e2c-821c-dffc3ba6e87e'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'PwC-IntegrationPlatform-Tst'
+    location: 'UK West'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/nataku6262/ARMTemplateTest/main/deploymentTemplate.json'
+    overrideParameters: '-projectName GavinNamedMe'
+    deploymentMode: 'Incremental'
