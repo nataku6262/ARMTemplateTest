@@ -20,5 +20,5 @@ steps:
     location: 'UK West'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/nataku6262/ARMTemplateTest/main/deploymentTemplate.json'
-    overrideParameters: '-projectName gwprjname'
+    overrideParameters: '-workflows_gw_auth_get_token_name gwprjname'
     deploymentMode: 'Incremental'
